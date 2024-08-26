@@ -7,6 +7,14 @@ namespace MyApp
         // Data members of the class
         int id;
         string name;
+
+        public Program(){
+            
+            //What is Constructor -:In C#, constructor is a special method which is invoked automatically at the time of object creation.
+            Console.WriteLine("Constructor Invoked");
+
+        }
+
         
         // Method to initialize data members
         public void Initialise(int id, string name)
