@@ -35,6 +35,8 @@ namespace MyApp
 
             Loop.LoopMain();
             Arrays.ArrayMain();
+            Functions.FuncMain();
+            
         }
     }
 }

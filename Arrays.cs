@@ -65,19 +65,33 @@ namespace MyConsoleApp
                 Console.WriteLine(); // New line after each row
             }
 
-            foreach(int item in matrx){
+            // Uncomment the following block if you want to flatten the matrix and iterate over it
+            /*
+            foreach (int item in matrix)
+            {
                 Console.WriteLine(item);
             }
+            */
 
-            //Jagged Arrays -: Jagged array is a array of arrays such that member arrays can be of different sizes.
+            // Jagged Arrays - A jagged array is an array of arrays such that member arrays can be of different sizes.
 
+            int[][] temporary = new int[3][];
 
-            int [][] temporary = new int[3][];
+            temporary[0] = new[] { 10, 20, 30, 40 };
+            temporary[1] = new[] { 30, 40, 60, 70 };
+            temporary[2] = new[] { 40, 60, 90, 90, 80 };
 
-            temporary[0] = new [] {10,20,30,40};
-            temporary[1] = new [] {30,40,60,70};
-            temporary[2] = new [] {40,60,90,90};
+            // Note: We use Jagged Arrays so that we can deal with containers having dynamic sizes.
 
+            // Displaying the jagged array
+            for (int i = 0; i < temporary.Length; i++)
+            {
+                for (int j = 0; j < temporary[i].Length; j++)
+                {
+                    Console.Write(temporary[i][j] + " ");
+                }
+                Console.WriteLine(); // New line after each jagged array row
+            }
         }
     }
 }
