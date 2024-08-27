@@ -2,13 +2,13 @@ using System;
 
 namespace MyApp
 {
-    public class Program
+    public class Programmm
     {
         // Data members of the class
         int id;
         string name;
 
-        public Program(){
+        public Programmm(){
             
             //What is Constructor -:In C#, constructor is a special method which is invoked automatically at the time of object creation.
             Console.WriteLine("Constructor Invoked");
@@ -36,7 +36,7 @@ namespace MyApp
     {
         public static void Main(string[] args)
         {
-            Program p = new Program();
+            Programmm p = new Programmm();
             p.Initialise(12, "Ankit"); // Correctly initialize with parameters
             p.Display(); // Display the values
         }

@@ -4,14 +4,7 @@ namespace MyApp
 {
     public class Functions
     {
-        // Method to return the sum of two integers (non-static)
         public int ReturnSum(int a, int b)
-
-        // {/*
-             Paramerised Function        
-        */}
-
-        // Non - Static Method or Instance Method 
         {
             return a + b;
         

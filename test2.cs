@@ -3,7 +3,7 @@ using MyConsoleApp;
 
 namespace MyApp
 {
-    class Program
+    class Programm
     {
         static void Main(string[] args)
         {
@@ -35,7 +35,8 @@ namespace MyApp
 
             Loop.LoopMain();
             Arrays.ArrayMain();
-            Functions.FuncMain();
+            // Functions.FuncMain();
+            Mainn.DesMain();
             
         }
     }

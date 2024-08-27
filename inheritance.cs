@@ -1,98 +1,48 @@
-using System;
+﻿using System;
 
-namespace MyApp
+namespace Oops_Concept
 {
-    // Base class
-    public class Vehicle
+    // This is the example of Single Level Inheritance (Man -> Father)
+    public class Man
     {
-        public int No { get; set; }
-        public int Mileage { get; set; }
+        protected string name; // Made protected to allow access in derived class
+        protected string dob;  // Made protected to allow access in derived class
 
-        public int GetNo()
+        public Man(string name, string dob)
         {
-            return No;
+            this.name = name;
+            this.dob = dob;
         }
 
-        public int GetMileage()
+        // Marking the method as virtual to allow overriding in derived classes
+        public virtual void Showing_The_Role()
         {
-            return Mileage;
+            Console.WriteLine("I am a Man");
         }
     }
 
-    // Derived class: Car
-    public class Car : Vehicle
+    public class Father : Man
     {
-        public string Type { get; set; }
-        public string Company { get; set; }
-
-        // Default constructor
-        public Car()
+        public Father(string name, string dob) : base(name, dob)
         {
         }
 
-        public string GetCompanyName()
+        // Correctly overriding the base class method
+        public override void Showing_The_Role()
         {
-            return Company;
-        }
-
-        public string GetTypeOfCar()
-        {
-            return Type;
+            Console.WriteLine("I am a Father");
         }
     }
 
-    // Derived class: Truck
-    public class Truck : Vehicle
+    internal class Programm
     {
-        public int LoadCapacity { get; set; }
-
-        // Default constructor
-        public Truck()
+        static void Main(string[] args)
         {
-        }
+            // Creating an instance of the Father class
+            Father f = new Father("Saini", "1233");
 
-        public int GetLoadCapacity()
-        {
-            return LoadCapacity;
-        }
-    }
-
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            // Create an instance of the Car class
-            Car myCar = new Car
-            {
-                No = 1234,
-                Mileage = 25,
-                Type = "Sedan",
-                Company = "Toyota"
-            };
-
-            // Create an instance of the Truck class
-            Truck myTruck = new Truck
-            {
-                No = 5678,
-                Mileage = 15,
-                LoadCapacity = 10000 // In kilograms
-            };
-
-            // Print Car details
-            Console.WriteLine("Car Details:");
-            Console.WriteLine("Company: " + myCar.GetCompanyName());
-            Console.WriteLine("Type: " + myCar.GetTypeOfCar());
-            Console.WriteLine("Number: " + myCar.GetNo());
-            Console.WriteLine("Mileage: " + myCar.GetMileage() + " km/l");
-
-            // Print Truck details
-            Console.WriteLine("\nTruck Details:");
-            Console.WriteLine("Number: " + myTruck.GetNo());
-            Console.WriteLine("Mileage: " + myTruck.GetMileage() + " km/l");
-            Console.WriteLine("Load Capacity: " + myTruck.GetLoadCapacity() + " kg");
-
-            // Wait for user input before closing
-            Console.ReadLine();
+            // Calling the overridden method
+            f.Showing_The_Role();  // Output: I am a Father
         }
     }
 }
