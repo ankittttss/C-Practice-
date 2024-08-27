@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Oops_Concept.paramkeyword</StartupObject>
+    <StartupObject>Oops_Concept.InterfaceTut</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,11 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract.cs" />
+    <Compile Include="Delegates.cs" />
     <Compile Include="Destructor.cs" />
     <Compile Include="Encapsulation.cs" />
+    <Compile Include="ExceptionHandling.cs" />
     <Compile Include="Generics.cs" />
     <Compile Include="Hashset.cs" />
     <Compile Include="inheritance.cs" />
+    <Compile Include="InterfaceTut.cs" />
     <Compile Include="ListTut.cs" />
     <Compile Include="MemberOverloading.cs" />
     <Compile Include="paramkeyword.cs" />

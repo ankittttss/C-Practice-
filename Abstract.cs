@@ -13,8 +13,26 @@ namespace Oops_Concept
         public abstract void print();
         public abstract void showResult();
     }
+
+    public class Genericcs : Methods
+    {
+        public Genericcs() { }
+
+        public override void print()
+        {
+
+        }
+
+        public override void showResult()
+        {
+
+        }
+   }
     internal class Abstract
     {
+         public static void Main(String[] args)
+        {
 
+        }
     }
 }
